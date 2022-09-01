@@ -26,6 +26,8 @@
 
 /* Reset list styles */
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -51,6 +53,13 @@
 
 /* General Button styles */
 .button {
+  display: inline-block;
+  min-width: 73px;
+  min-height: 38px;
+  padding: 0px 22px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: var(--prime-fnt-weight);
   font-size: var(--primary-fnt-size);
@@ -117,10 +126,13 @@
 
 /* Main Hero */
 .main .section.hero {
+  margin-bottom: 94px;
   background-color: var(--sec-bkg-clr);
 }
 /* Main Hero Title */
 .main .section.hero .hero-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -131,6 +143,8 @@
 }
 /* Main Hero button */
 .main .section.hero .button.primary {
+  padding: 0px 32px;
+  height: 50px;
   font-weight: 700;
   font-size: var(--primary-fnt-size);
   line-height: 1.88;
@@ -139,6 +153,9 @@
 }
 
 /* Main Feature list */
+.main .section.features {
+  margin-bottom: 94px;
+}
 
 /* Main Feature list Title ivisible */
 .main .section.features .section-title {
@@ -154,22 +171,43 @@
   overflow: hidden;
 }
 .main .section.features .features-list .title {
+  margin: 0;
   font-size: var(--sec-fnt-size);
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-text-clr);
 }
+.main .section.features .features-list .description {
+  margin: 0;
+}
+
+/* Main Work examples */
+.main .section.work-examples {
+  margin-bottom: 94px;
+}
+.main .section.work-examples .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
 
 /* Main Team */
 .main .section.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--sec-accent-clr);
 }
+.main .section.team .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
 /* Main Team Team list Card */
 .main .section.team .team-list .card {
   background-color: var(--primary-bkg-clr);
 }
 /* Main Team Team list Card Title */
 .main .section.team .team-list .title {
+  margin: 0;
   font-weight: var(--prime-fnt-weight);
   font-size: var(--primary-fnt-size);
   line-height: 1.19;
@@ -178,6 +216,7 @@
 }
 /* Main Team Team list Card Description */
 .main .section.team .team-list .description {
+  margin: 0;
   font-size: var(--primary-fnt-size);
   line-height: 1.19;
   text-align: center;
@@ -238,4 +277,19 @@
 .main .section.projects .projects-list .description {
   font-size: var(--primary-fnt-size);
   line-height: 1.88;
+}
+
+/* -------------------------------------------------- */
+/* Positioning */
+/* --------------------------------------------------- */
+.container {
+  outline: 2px solid red;
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered {
+  text-align: center;
 }
