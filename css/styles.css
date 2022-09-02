@@ -14,6 +14,7 @@
 }
 
 /* Global styles----------------------------------------------------- */
+
 /* Body tag */
 .page {
   font-family: Roboto, sans-serif;
@@ -22,6 +23,15 @@
   line-height: 1.71;
   background-color: var(--primary-bkg-clr);
   color: var(--primary-text-clr);
+}
+
+/* Global page width and horizontal positioning */
+.container {
+  /* outline: 2px solid red; */
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Reset list styles */
@@ -57,7 +67,6 @@
   min-width: 73px;
   min-height: 38px;
   padding: 0px 22px;
-  margin: 5px;
   border: none;
   border-radius: 4px;
   font-family: inherit;
@@ -85,6 +94,34 @@
 }
 
 /* Header ----------------------------------------------------------- */
+
+/* Header elements positioning */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+.header .site-nav {
+  display: flex;
+  align-items: center;
+}
+.header .site-nav .list {
+  display: flex;
+}
+.header .contact-list {
+  display: flex;
+}
+.header .site-nav .link.link.logo {
+  margin-right: 93px;
+}
+.header .site-nav .list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.header .contact-list .item:not(:last-child) {
+  margin-right: 50px;
+}
 
 /* Header Site navigation link */
 .header .site-nav .link.page {
@@ -126,8 +163,9 @@
 
 /* Main Hero */
 .main .section.hero {
-  margin-bottom: 94px;
+  padding: 200px 452px;
   background-color: var(--sec-bkg-clr);
+  text-align: center;
 }
 /* Main Hero Title */
 .main .section.hero .hero-title {
@@ -154,7 +192,7 @@
 
 /* Main Feature list */
 .main .section.features {
-  margin-bottom: 94px;
+  padding: 94px;
 }
 
 /* Main Feature list Title ivisible */
@@ -170,6 +208,18 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* Main Feature list positioning */
+.main .section.features .features-list {
+  display: flex;
+}
+.main .section.features .features-list .item {
+  flex: 1;
+  margin-right: 30px;
+}
+.main .section.features .features-list .item:last-child {
+  margin-right: 0;
+}
+
 .main .section.features .features-list .title {
   margin: 0;
   font-size: var(--sec-fnt-size);
@@ -183,11 +233,18 @@
 
 /* Main Work examples */
 .main .section.work-examples {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 .main .section.work-examples .section-title {
   margin-top: 0;
   margin-bottom: 50px;
+}
+.main .section.work-examples .list.work-list {
+  display: flex;
+  justify-content: space-between;
+}
+.main .section.work-examples .list.work-list .img {
+  display: block;
 }
 
 /* Main Team */
@@ -200,10 +257,18 @@
   margin-top: 0;
   margin-bottom: 50px;
 }
+.main .section.team .list.team-list {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Main Team Team list Card */
 .main .section.team .team-list .card {
   background-color: var(--primary-bkg-clr);
+}
+.main .section.team .team-list .title-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /* Main Team Team list Card Title */
 .main .section.team .team-list .title {
@@ -216,7 +281,8 @@
 }
 /* Main Team Team list Card Description */
 .main .section.team .team-list .description {
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: var(--primary-fnt-size);
   line-height: 1.19;
   text-align: center;
@@ -252,7 +318,10 @@
 /* Main--------------------------------------------------------------- */
 
 /* Main Projects */
-
+.main .section.projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* Main Projects hide title */
 .main .section.projects .projects-title {
   position: absolute;
@@ -266,8 +335,40 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* Main Projects elements positioning */
+.main .section.projects .list.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.main .section.projects .list.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+.main .section.projects .list.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .section.projects .projects-list .item {
+  width: calc((100% - 60px) / 3);
+}
+.main .section.projects .projects-list .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.main .section.projects .projects-list .item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+/* Main Projects Project list img */
+.main .section.projects .projects-list .img {
+  display: block;
+}
 /* Main Projects Project list title */
+.main .section.projects .projects-list .title-box {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
 .main .section.projects .projects-list .title {
+  margin: 0;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -275,21 +376,7 @@
 }
 /* Main Projects Project list description */
 .main .section.projects .projects-list .description {
+  margin: 0;
   font-size: var(--primary-fnt-size);
   line-height: 1.88;
-}
-
-/* -------------------------------------------------- */
-/* Positioning */
-/* --------------------------------------------------- */
-.container {
-  outline: 2px solid red;
-  width: 1200px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.centered {
-  text-align: center;
 }
