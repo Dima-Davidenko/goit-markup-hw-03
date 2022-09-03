@@ -169,8 +169,12 @@
 }
 /* Main Hero Title */
 .main .section.hero .hero-title {
+  display: block;
+  width: 696px;
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -263,6 +267,9 @@
 }
 /* Main Team Team-list Card */
 .main .section.team .team-list .card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-bkg-clr);
 }
 .main .section.team .team-list .title-box {
@@ -290,7 +297,13 @@
 /* Footer ------------------------------------------------------------*/
 
 .footer {
+  padding: 60px;
   background-color: var(--sec-bkg-clr);
+}
+.footer .link.logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--sec-text-clr);
 }
 /* Footer Contacts */
 .footer .contacts .link.contact {
@@ -305,9 +318,8 @@
   line-height: 1.71;
   color: var(--sec-text-clr);
 }
-/* Footer Logo change color because of dark background*/
-.footer .link.logo {
-  color: var(--sec-text-clr);
+.footer .contacts .list .item.item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -365,7 +377,9 @@
 /* Main Projects Project list title */
 .main .section.projects .projects-list .title-box {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 .main .section.projects .projects-list .title {
   margin-top: 0;
