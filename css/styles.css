@@ -95,7 +95,9 @@
 }
 
 /* Header ----------------------------------------------------------- */
-
+.header {
+  min-width: 1200px;
+}
 /* Header elements positioning */
 .header .container {
   display: flex;
@@ -151,7 +153,9 @@
 }
 
 /* Main ------------------------------------------------------------- */
-
+.main .section {
+  min-width: 1200px;
+}
 /* Main General Sections Title */
 .main .section-title {
   font-size: 36px;
@@ -298,6 +302,7 @@
 
 .footer {
   padding: 60px;
+  min-width: 1200px;
   background-color: var(--sec-bkg-clr);
 }
 .footer .link.logo {
