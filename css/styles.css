@@ -95,15 +95,11 @@
 }
 
 /* Header ----------------------------------------------------------- */
-.header {
-  min-width: 1200px;
-}
 /* Header elements positioning */
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
   border-bottom: 1px solid #ececec;
 }
 .header .site-nav {
@@ -119,6 +115,10 @@
 .header .site-nav .link.link.logo {
   margin-right: 93px;
 }
+.header .site-nav .list .item {
+  padding: 0;
+  margin-right: 50px;
+}
 .header .site-nav .list .item:not(:last-child) {
   margin-right: 50px;
 }
@@ -128,6 +128,8 @@
 
 /* Header Site navigation link */
 .header .site-nav .link.page {
+  display: block;
+  padding: 32px 0 31px;
   font-weight: var(--prime-fnt-weight);
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -153,9 +155,6 @@
 }
 
 /* Main ------------------------------------------------------------- */
-.main .section {
-  min-width: 1200px;
-}
 /* Main General Sections Title */
 .main .section-title {
   font-size: 36px;
@@ -174,7 +173,7 @@
 /* Main Hero Title */
 .main .section.hero .hero-title {
   display: block;
-  width: 696px;
+  max-width: 696px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
@@ -199,7 +198,7 @@
 /* Main Feature list */
 .main .section.features {
   padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 47px;
 }
 /* Main Feature list Title ivisible */
 .main .section.features .section-title {
@@ -240,6 +239,7 @@
 /* Main Work examples */
 /* Main Work examples positioning */
 .main .section.work-examples {
+  padding-top: 47px;
   padding-bottom: 94px;
 }
 .main .section.work-examples .section-title {
@@ -301,8 +301,7 @@
 /* Footer ------------------------------------------------------------*/
 
 .footer {
-  padding: 60px;
-  min-width: 1200px;
+  padding: 60px 0;
   background-color: var(--sec-bkg-clr);
 }
 .footer .link.logo {
